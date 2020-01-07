@@ -1,0 +1,23 @@
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+td {
+  border: 2px solid #333;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'arial';
+  font-size: 70px;
+  cursor: pointer;
+}
+
+table {
+  border-color: black;
+  position: absolute;
+  left: 50%;
+  margin-left: -155px;
+  top: 100px;
+}

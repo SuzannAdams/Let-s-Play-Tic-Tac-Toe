@@ -1,7 +1,12 @@
+body {
+  background-color: wheat;
+}
+
 h1 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   color: mediumblue;
+  font-size: xx-large;
 }
 
 td {
@@ -13,6 +18,7 @@ td {
   font-family: 'arial';
   font-size: 70px;
   cursor: pointer;
+  background-color: white;
 }
 
 table {
@@ -21,4 +27,11 @@ table {
   left: 50%;
   margin-left: -155px;
   top: 100px;
+}
+
+div {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  color: crimson;
+  font-weight: bold;
 }

@@ -13,7 +13,7 @@ This is a simple game that is suitable to be played by people of all ages and re
 The technologies used to create this game are HTML5, CSS and JavaScript. The code was passed through the HTML5 Validator and CSS validator and passed both tests.
 
 **Wireframes**
-![wireframe](https://user-images.githubusercontent.com/58324606/72125529-cc20ef00-331d-11ea-802a-3c1fb7548790.jpg)
+![wireframe image](https://user-images.githubusercontent.com/58324606/72126067-a1d03100-331f-11ea-8138-e26fc9473a22.jpg)
 
 **Problems**
 Initially, when I thought of creating this game, I imagined it to be more vibrant with squares that would turn to reveal an X on an orange background or an O on a grean background. This became undoeable for me when the first two formulas that I wrote, which had fat arrow functions and then later succinct function formulas, would not run. To my eyes, the formulas looked logical, however; it may have been that maybe a syntax was out of place or an incorrect code was injected onto a line that prevented my DRY formulas from functioning. As a result, the Let's Play Tic Tac Toe game is written with minimal abbreviation and not according to my initial vision.

@@ -55,7 +55,7 @@ function threeInRow() {
     square[0].innerHTML === square[1].innerHTML &&
     square[2].innerHTML === square[0].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'We have a winner!';
     disableListener();
     console.log(message);
     showMessage();
@@ -66,7 +66,7 @@ function threeInRow() {
     square[3].innerHTML === square[4].innerHTML &&
     square[5].innerHTML === square[3].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'You`re a winner!';
     disableListener();
     console.log(message);
     showMessage();
@@ -76,7 +76,7 @@ function threeInRow() {
     square[6].innerHTML === square[7].innerHTML &&
     square[8].innerHTML === square[6].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'It`s your game, Winner!';
     disableListener();
     console.log(message);
     showMessage();
@@ -86,7 +86,7 @@ function threeInRow() {
     square[0].innerHTML === square[4].innerHTML &&
     square[8].innerHTML === square[0].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'You win tic-tac-toe!';
     disableListener();
     console.log(message);
     showMessage();
@@ -96,7 +96,7 @@ function threeInRow() {
     square[2].innerHTML === square[4].innerHTML &&
     square[6].innerHTML === square[2].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'Great game, Winner!';
     disableListener();
     console.log(message);
     showMessage();
@@ -106,7 +106,7 @@ function threeInRow() {
     square[0].innerHTML === square[3].innerHTML &&
     square[6].innerHTML === square[0].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'You played to win!';
     disableListener();
     console.log(message);
     showMessage();
@@ -116,7 +116,7 @@ function threeInRow() {
     square[1].innerHTML === square[4].innerHTML &&
     square[7].innerHTML === square[1].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'Nice day to win!';
     disableListener();
     console.log(message);
     showMessage();
@@ -126,7 +126,7 @@ function threeInRow() {
     square[2].innerHTML === square[5].innerHTML &&
     square[8].innerHTML === square[2].innerHTML
   ) {
-    message = 'Winner!';
+    message = 'Three in a row wins!';
     disableListener();
     console.log(message);
     showMessage();

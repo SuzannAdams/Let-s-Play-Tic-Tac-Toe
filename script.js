@@ -13,7 +13,6 @@ const winCombos = [
 const messageDiv = document.getElementsByClassName('message')[0];
 //give the cells a variable to make easier to retrieve
 const square = document.querySelectorAll('.cell');
-//console.log(square);
 
 //consulted with Myshawne Stallings on newGame function
 function newGame() {
@@ -25,13 +24,11 @@ function newGame() {
   messageDiv.innerText = ''; //to reset the div so the NewGame button will reset
   for (let i = 0; i < square.length; i++) {
     square[i].addEventListener('click', clickFn);
-    console.log(square[i]);
   }
 }
 
 //1st make an eventlistener
 function clickFn(event) {
-  //   console.log(event.target);
   event.target.innerHTML = `${player}`;
   if (player === 'X') {
     player = 'O';
@@ -43,23 +40,20 @@ function clickFn(event) {
 //event listener
 for (let i = 0; i < square.length; i++) {
   square[i].addEventListener('click', clickFn);
-  console.log(square[i]);
 }
 const disableListener = () =>
   square.forEach(square => square.removeEventListener('click', clickFn));
 
 //per Jennifer use an if else statement to go through winCombos
+//make a function that checks for a winCombo then stop game and show message 'Winner!' or 'Tie, play again.'
 function threeInRow() {
+  // this function is a good candidate to refactor. Instead of checking all squares at each turn, you could keep track of each player's selections and check their selections instead.
   if (
     square[0].innerHTML !== '' &&
     square[0].innerHTML === square[1].innerHTML &&
     square[2].innerHTML === square[0].innerHTML
   ) {
     message = 'We have a winner!';
-    disableListener();
-    console.log(message);
-    showMessage();
-    //make a function that checks for a winCombo then stop game and show message 'Winner!' or 'Tie, play again.'
     winnerColorRed(0, 1, 2);
   } else if (
     square[3].innerHTML !== '' &&
@@ -67,9 +61,6 @@ function threeInRow() {
     square[5].innerHTML === square[3].innerHTML
   ) {
     message = 'You`re a winner!';
-    disableListener();
-    console.log(message);
-    showMessage();
     winnerColorRed(3, 4, 5);
   } else if (
     square[6].innerHTML !== '' &&
@@ -77,9 +68,6 @@ function threeInRow() {
     square[8].innerHTML === square[6].innerHTML
   ) {
     message = 'It`s your game, Winner!';
-    disableListener();
-    console.log(message);
-    showMessage();
     winnerColorRed(6, 7, 8);
   } else if (
     square[0].innerHTML !== '' &&
@@ -87,9 +75,6 @@ function threeInRow() {
     square[8].innerHTML === square[0].innerHTML
   ) {
     message = 'You win tic-tac-toe!';
-    disableListener();
-    console.log(message);
-    showMessage();
     winnerColorRed(0, 4, 8);
   } else if (
     square[2].innerHTML !== '' &&
@@ -97,9 +82,6 @@ function threeInRow() {
     square[6].innerHTML === square[2].innerHTML
   ) {
     message = 'Great game, Winner!';
-    disableListener();
-    console.log(message);
-    showMessage();
     winnerColorRed(2, 4, 6);
   } else if (
     square[0].innerHTML !== '' &&
@@ -107,9 +89,6 @@ function threeInRow() {
     square[6].innerHTML === square[0].innerHTML
   ) {
     message = 'You played to win!';
-    disableListener();
-    console.log(message);
-    showMessage();
     winnerColorRed(0, 3, 6);
   } else if (
     square[1].innerHTML !== '' &&
@@ -117,9 +96,6 @@ function threeInRow() {
     square[7].innerHTML === square[1].innerHTML
   ) {
     message = 'Nice day to win!';
-    disableListener();
-    console.log(message);
-    showMessage();
     winnerColorRed(1, 4, 7);
   } else if (
     square[2].innerHTML !== '' &&
@@ -127,9 +103,6 @@ function threeInRow() {
     square[8].innerHTML === square[2].innerHTML
   ) {
     message = 'Three in a row wins!';
-    disableListener();
-    console.log(message);
-    showMessage();
     winnerColorRed(2, 5, 8);
   } else if (
     square[0].innerHTML !== '' &&
@@ -143,20 +116,20 @@ function threeInRow() {
     square[8].innerHTML !== ''
   ) {
     message = 'Tie, play again.';
-    disableListener();
-    console.log(message);
-    showMessage();
     //Jerrica, the last "else if" needs to check if none are empty and would have automatically gone through the no winCombos, then there is a tie. Display message 'Play again.'
   }
+  disableListener();
+  showMessage();
 }
 
+//this function created to show 'Winner!' or 'Tie, play again.' on the board
 function showMessage() {
   messageDiv.innerText = message;
-} //this function created to show 'Winner!' or 'Tie, play again.' on the board
+}
 
+//this function created to change boxes to red when there is a winner.
 function winnerColorRed(box1, box2, box3) {
   square[box1].style.background = 'crimson';
   square[box2].style.background = 'crimson';
   square[box3].style.background = 'crimson';
 }
-//this function created to change boxes to red when there is a winner.

@@ -32,7 +32,8 @@ function newGame() {
 //1st make an eventlistener
 function clickFn(event) {
   //   console.log(event.target);
-  event.target.innerHTML = `${player}`;
+  event.target.innerHTML = player;
+  //Per Qusai, I removed backticks of ${player} and then can put sound bite under line 38 (player 'O') and under line 41 (player 'X'). Invoke music in a separate function so it plays when page is loaded, probably with NewGame function.
   if (player === 'X') {
     player = 'O';
   } else {
@@ -45,6 +46,7 @@ for (let i = 0; i < square.length; i++) {
   square[i].addEventListener('click', clickFn);
   console.log(square[i]);
 }
+//disable event listener
 const disableListener = () =>
   square.forEach(square => square.removeEventListener('click', clickFn));
 
@@ -61,6 +63,7 @@ function threeInRow() {
     showMessage();
     //make a function that checks for a winCombo then stop game and show message 'Winner!' or 'Tie, play again.'
     winnerColorRed(0, 1, 2);
+    //color boxes will change to red with threeinRow
   } else if (
     square[3].innerHTML !== '' &&
     square[3].innerHTML === square[4].innerHTML &&
@@ -141,6 +144,8 @@ function threeInRow() {
     square[6].innerHTML !== '' &&
     square[7].innerHTML !== '' &&
     square[8].innerHTML !== ''
+    // square 8 is not empty
+    //do a for loop here per Qusai
   ) {
     message = 'Tie, play again.';
     disableListener();
